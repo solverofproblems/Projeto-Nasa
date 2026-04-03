@@ -1,25 +1,41 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nasa</title>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroLens | Explore o Cosmos</title>
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/logo.png" alt="AstroLens Logo" class="logo-img">
+            <span class="logo-text">AstroLens</span>
+        </div>
+    </header>
 
-    <h1>Informe a data de nascimento: </h1>
+    <main>
+        <section class="hero">
+            <h1>Sua Janela para o Universo</h1>
+            <p>Descubra o que a NASA capturou no dia que mudou sua história.</p>
+        </section>
 
-    <input id="data_nascimento" type="text" placeholder="YYYY-MM-DD" required></input>
-    <button id="btnSend"> Enviar </button>
+        <section class="search-box">
+            <label for="data_nascimento">Escolha uma Data</label>
+            <input id="data_nascimento" type="date" required>
+            <button id="btnSend">Explorar o Cosmo</button>
+        </section>
 
-    <div id="campo_resultado">
+        <section id="campo_resultado">
+            <!-- Os resultados serão injetados aqui via JS -->
+        </section>
+    </main>
 
-      <!-- <h1>Resultado</h1> -->
-
-    </div>
-
+    <footer>
+        <p>&copy; 2024 AstroLens. Dados fornecidos pela NASA APOD API.</p>
+    </footer>
 
     <script type="module" src="/src/main.js"></script>
-  </body>
+</body>
 </html>
