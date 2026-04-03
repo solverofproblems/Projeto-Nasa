@@ -29,17 +29,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    /* Centralização Vertical */
+    /* Centralização Vertical Removida para Evitar Sobreposição */
     overflow-x: hidden;
     padding: 2rem 0;
 }
 
 header {
     width: 100%;
-    position: fixed;
+    position: absolute; /* Cabeçalho no topo, mas fixo na página (não na tela) */
     top: 0;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,16 +55,14 @@ header {
 }
 
 .logo-img {
-    width: 200px;
-    /* Aumentado para visibilidade total */
-    height: 200px;
+    width: 120px;
+    height: 120px;
     mix-blend-mode: screen;
     filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.3));
 }
 
 .logo-text {
-    font-size: 1.8rem;
-    /* Aumentado para acompanhar o logo */
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -78,10 +75,10 @@ header {
 main {
     max-width: 900px;
     width: 90%;
+    margin-top: 180px; /* Garante que o conteúdo não fique sob o topo absoluto do site */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 2.5rem;
     animation: fadeIn 1s ease;
 }

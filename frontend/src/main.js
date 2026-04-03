@@ -3,7 +3,7 @@ const btnSend = document.getElementById('btnSend');
 const resultContainer = document.getElementById('campo_resultado');
 
 btnSend.addEventListener('click', async () => {
-    
+
     if (!inputDate.value) {
         alert('Por favor, selecione uma data válida para viajar pelo espaço!');
         return;
@@ -11,10 +11,10 @@ btnSend.addEventListener('click', async () => {
 
     // Exibir Spinner de Loading
     resultContainer.innerHTML = '<div class="loading-spinner"></div>';
-    
+
     try {
-        const response = await fetch(`http://localhost:4000/getPicture?date=${inputDate.value}`);
-        
+        const response = await fetch(`https://projeto-nasa.onrender.com/getPicture?date=${inputDate.value}`);
+
         if (!response.ok) throw new Error('Falha na comunicação com o centro de comando.');
 
         const data = await response.json();
